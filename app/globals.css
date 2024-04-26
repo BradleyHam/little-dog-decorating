@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;700&display=swap');
+
+
+body {
+
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+h3{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: white;
+}
+
+h4{
+  font-size: 14px;        /* equivalent to Tailwind's text-sm */
+  color: var(--brand-blue); /* custom property for brand blue color, define in :root or specific scope */
+  text-transform: uppercase; /* equivalent to Tailwind's uppercase */
+  letter-spacing: 0.05em; /* equivalent to Tailwind's tracking-wide */
+  opacity: 0.6;       
+}
+.bottom-footer{
+  border-color: rgba(255, 255, 255, 0.5); 
+}

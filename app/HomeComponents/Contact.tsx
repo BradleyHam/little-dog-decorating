@@ -5,9 +5,9 @@ import ContactForm from "./ContactForm";
 export default function Contact(){
     return (
         <div className="contact py-28">
-            <div className="container mx-auto  ">
-            <div className=" flex bg-gray-200 translate-y-2 w-[80%] mx-auto p-12  bg-light-background shadow-xl rounded-lg">
-                <div className="text-side w-1/2 ">
+            <div className=" container  ">
+            <div className=" flex flex-col   space-y-8 bg-gray-00 translate-y-2 lg:w-[80%]  p-5 py-12 mx-5  bg-light-background shadow-xl rounded-lg">
+                <div className="text-side lg:w-1/2 ">
                     <h3 className="capitalize text-brand-blue mb-4">contact us for a <br></br> <span className="capitalize italic text-brand-orange"> free consultation</span></h3>
                     <div className="contact-method mb-2 flex items-center space-x-2">
                         <FaPhoneAlt color='#0F122F'/>
@@ -18,7 +18,7 @@ export default function Contact(){
                         <p className="text-lato opacity-70 text-lg">qg2p8@example.com</p>
                     </div>
                 </div>
-                <div className="form-side w-1/2">
+                <div className="form-side lg:w-1/2">
                     <ContactForm/>
                 </div>
              

@@ -17,19 +17,20 @@ export default function Services() {
     return (
         <div className='bg-light-background'>
         <div className='services container mx-auto py-28 space-y-12'>
-            <div className='service flex'>
-                <div className='w-2/3 bg-gray-300 h-[300px] relative'>
+            <div className='px-5 service flex flex-col'>
+                <div className='lg:w-2/3 bg-gray-300 h-[300px] relative'>
                     <Image src='/images/mica9.jpeg'   layout='fill'
         objectFit='cover'  alt='something'/>
                 </div>
                <ServiceText heading={ServiceData.exteriorPainting.heading } bulletPoints={ServiceData.exteriorPainting.bulletPoints}/>
             </div>
-            <div className='service flex'>
-                <ServiceText heading={ServiceData.interiorPainting.heading } bulletPoints={ServiceData.interiorPainting.bulletPoints}/>
-                <div className='w-2/3 bg-gray-300 h-[300px] relative'>
+            <div className='service flex flex-col px-5'>
+               
+                <div className='lg:w-2/3 bg-gray-300 h-[300px] relative'>
                         <Image src='/images/base-hostel.webp'   layout='fill'
                 objectFit='cover'  alt='something'/>
                 </div>
+                <ServiceText heading={ServiceData.interiorPainting.heading } bulletPoints={ServiceData.interiorPainting.bulletPoints}/>
             </div>
         </div>
         </div>

@@ -16,10 +16,10 @@ const testimonials = [
 export default function Testimonials() {
     return (
         <div className="testimonials bg-light-background">
-            <div className='container flex space-x-12 mx-auto py-28'>
+            <div className='container px-5 flex flex-col space-y-12 lg:space-x-12 mx-auto py-28'>
                 {
                     testimonials.map((item, index) => (
-                        <div className="w-1/2">
+                        <div className="lg:w-1/2">
                             <TestimonialCard key={index} {...item}/>
                         </div>
                     ))

@@ -100,8 +100,8 @@ function ContactForm() {
             <p className='text-[17px] font-medium'>Sending...</p>
           ) : (
             <>
-              <p className='text-[17px] font-medium'>Submit</p>
-              <MdArrowOutward />
+              <p className='text-[17px] font-medium underline cursor-pointer'>Submit</p>
+            
             </>
           )}
         </button>

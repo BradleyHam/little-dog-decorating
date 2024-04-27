@@ -1,5 +1,6 @@
 'use client'
 import {useState} from 'react'
+import Link from 'next/link';
 
 import ButtonCta from "../PageComponents/ButtonCta";
 import Image from 'next/image'
@@ -17,8 +18,12 @@ export default function Navbar() {
                     {open && (
 
                         <ul className={'flex flex-col items-start space-y-4 px-5 py-10 pt-10 w-screen absolute right-0 translate-y-full bottom-0 bg-brand-blue lg:hidden'}>
-                            <li>Home</li>
-                            <li>About</li>
+                              <Link href="/">
+                                <li>Home</li>
+                            </Link>
+                            <Link href="/about">
+                                <li>About</li>
+                            </Link>
                             <li>Projects</li>
                             <ButtonCta  text='book a consultation'/>
                         </ul>
@@ -26,8 +31,12 @@ export default function Navbar() {
                     )}
                   
                     <ul className="flex-row space-x-8 items-center font-lato hidden lg:flex">
-                        <li>Home</li>
-                        <li>About</li>
+                    <Link href="/">
+                                <li>Home</li>
+                            </Link>
+                        <Link href="/about">
+                                <li>About</li>
+                            </Link>
                         <li>Projects</li>
                         <ButtonCta  text='book a consultation'/>
                     </ul>

@@ -11,8 +11,8 @@ export default function Hero() {
             <HeroHeading />
             <div className="">
                
-                <div className="width-full h-[500px]   bg-gray-600">
-                     <Image src='' alt='something'/>
+                <div className="width-full h-[500px]   relative shadow-xl">
+                     <Image src='/images/unsplash-house.jpg' layout='fill' alt='something'/>
                  </div>
                  <div className="stats px-5 flex flex-col space-y-8 items-start lg:flex-row justify-around items-left lg:items-center py-24">
                         <div className="master-painters lg:w-1/3 flex justify-center">

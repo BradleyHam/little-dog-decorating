@@ -16,7 +16,7 @@ const testimonials = [
 export default function Testimonials() {
     return (
         <div className="testimonials bg-light-background">
-            <div className='container px-5 flex flex-col space-y-12 lg:space-x-12 mx-auto py-28'>
+            <div className='container px-5 flex flex-col lg:flex-row items-center space-y-12 lg:space-y-0 lg:space-x-12 mx-auto py-28'>
                 {
                     testimonials.map((item, index) => (
                         <div className="lg:w-1/2">

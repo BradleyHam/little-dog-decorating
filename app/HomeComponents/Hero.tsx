@@ -6,10 +6,11 @@ import HeroHeading from "./HeroHeading";
 export default function Hero() {
     return (
         <>
+        <div className="container mx-auto">
             <HeroTestimonials />
             <HeroHeading />
             <div className="">
-               <div className="container mx-auto">
+               
                 <div className="width-full h-[500px]   bg-gray-600">
                      <Image src='' alt='something'/>
                  </div>
@@ -26,7 +27,7 @@ export default function Hero() {
                         
                  </div>
                </div>
-
+                
             </div>
         </>
     )

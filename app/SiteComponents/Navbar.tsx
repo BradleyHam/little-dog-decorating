@@ -8,7 +8,7 @@ import { IoMenu } from 'react-icons/io5';
 export default function Navbar() {
     const [open, setOpen] = useState(false)
     return (
-        <div className="navbar   w-screen bg-brand-blue fixed top-0 right-0 left-0 z-20">
+        <div className="navbar   w-screen bg-transparent fixed top-0 right-0 left-0 z-20">
             <div className=" container px-4 mx-auto flex flex-row justify-between items-center text-white">
             <div className="logo z-20 translate-y-4 order-last lg:order-first">
                 <Image src='/images/ldd-logo.png' alt='something' width={100} height={100}/>
@@ -47,7 +47,7 @@ export default function Navbar() {
                     </ul>
             
                     <div onClick={() => setOpen(!open)} className="cursor-pointer lg:hidden">
-                    <IoMenu size={30}/>
+                    <IoMenu color='#0F122F' size={30}/>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
-import Navbar from "./PageComponents/Navbar";
-import Footer from "./PageComponents/Footer";
+import Navbar from "./SiteComponents/Navbar";
+import Footer from "./SiteComponents/Footer";
 
 
 import Contact from "./HomeComponents/Contact";
@@ -8,12 +8,15 @@ import ProcessSection from "./HomeComponents/ProcessSection";
 import Services from "./HomeComponents/Services";
 import Testimonials from "./HomeComponents/Testimonials";
 import Faq from "./HomeComponents/Faq";
+import Image from 'next/image'
+import StatRow from './HomeComponents/StatRow'
 
 export default function Home() {
   return (
     <main className="pt-[80px] text-brand-blue">
       <Navbar />
         <Hero />
+        <StatRow />
         <Services />
         <ProcessSection />
         <Testimonials />

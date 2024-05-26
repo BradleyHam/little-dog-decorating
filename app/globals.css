@@ -2,13 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;700&display=swap');
+@import '@fontsource/poppins/400.css'; /* Regular */
+@import '@fontsource/poppins/500.css'; /* Medium */
+@import '@fontsource/poppins/700.css'; /* Bold */
+@import '@fontsource/poppins/600.css'; /* Bold */
 
+
+
+:root {
+  --font-poppins: 'Poppins', sans-serif;
+}
 
 body {
+  color: #0F122F;
+}
+h3{
+  color: #0F122F;
+  font-family: var(--font-poppins);
 
 }
 
+h1{
+ 
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 72px;
+  color: white;
+  font-family: 'poppins';
+  font-family: var(--font-poppins);
+
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -20,7 +43,7 @@ h3{
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
-  color: white;
+  
 }
 
 h4{
@@ -32,4 +55,12 @@ h4{
 }
 .bottom-footer{
   border-color: rgba(255, 255, 255, 0.5); 
+}
+
+.hero-container{
+  background: linear-gradient(180deg, rgb(15, 18, 47) 10%, rgba(15, 18, 47, 0.548)), url('../public/images/unsplash-house.jpg');
+  background-position: center;
+  background-size: cover;
+
+
 }

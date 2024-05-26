@@ -2,7 +2,7 @@
 import {useState} from 'react'
 import Link from 'next/link';
 
-import ButtonCta from "../PageComponents/ButtonCta";
+import ButtonCta from "./ButtonCta";
 import Image from 'next/image'
 import { IoMenu } from 'react-icons/io5';
 export default function Navbar() {
@@ -10,10 +10,10 @@ export default function Navbar() {
     return (
         <div className="navbar   w-screen bg-brand-blue fixed top-0 right-0 left-0 z-20">
             <div className=" container px-4 mx-auto flex flex-row justify-between items-center text-white">
-            <div className="logo z-20 translate-y-4">
+            <div className="logo z-20 translate-y-4 order-last lg:order-first">
                 <Image src='/images/ldd-logo.png' alt='something' width={100} height={100}/>
             </div>
-            <div className="navlinks ml-auto">
+            <div className="navlinks">
                 <div className='flex flex-row space-x-6 items-center'>
                     {open && (
 
@@ -24,7 +24,10 @@ export default function Navbar() {
                             <Link href="/about">
                                 <li>About</li>
                             </Link>
-                            <li>Projects</li>
+                            <Link href="/projects">
+                                <li>Projects</li>
+                            </Link>
+                           
                             <ButtonCta  text='book a consultation'/>
                         </ul>
                       
@@ -37,7 +40,9 @@ export default function Navbar() {
                         <Link href="/about">
                                 <li>About</li>
                             </Link>
-                        <li>Projects</li>
+                            <Link href="/projects">
+                                <li>projects</li>
+                            </Link>
                         <ButtonCta  text='book a consultation'/>
                     </ul>
             

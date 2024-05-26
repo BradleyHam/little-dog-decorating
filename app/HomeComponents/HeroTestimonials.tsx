@@ -37,10 +37,10 @@ const TestimonialCarousel = () => {
 
   return (
     <div className="overflow-hidden w-full pt-24 lg:overflow-visible">
-      <div className="flex transition-transform duration-500 ease-in-out lg:container mx-auto"
+      <div className="flex transition-transform duration-500 ease-in-out"
            style={{ transform: isLargeScreen ? 'none' : `translateX(${offset}%)` }}>
         {testimonials.map((testimonial, index) => (
-          <div key={testimonial.id} className="flex-none w-full px-4 lg:w-1/3">
+          <div key={testimonial.id} className="flex-none w-full  lg:w-1/3">
             <HeroTestimonial text={testimonial.text}/>
           </div>
         ))}

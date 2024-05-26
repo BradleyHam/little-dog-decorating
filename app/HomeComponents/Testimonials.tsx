@@ -19,8 +19,8 @@ export default function Testimonials() {
             <div className='container px-5 flex flex-col lg:flex-row items-center space-y-12 lg:space-y-0 lg:space-x-12 mx-auto py-28'>
                 {
                     testimonials.map((item, index) => (
-                        <div className="lg:w-1/2">
-                            <TestimonialCard key={index} {...item}/>
+                        <div key={index}className="lg:w-1/2">
+                            <TestimonialCard  {...item}/>
                         </div>
                     ))
                     

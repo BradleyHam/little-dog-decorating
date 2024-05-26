@@ -1,7 +1,7 @@
-import Footer from "../PageComponents/Footer";
-import Navbar from "../PageComponents/Navbar";
+import Footer from "../SiteComponents/Footer";
+import Navbar from "../SiteComponents/Navbar";
 import Image from 'next/image'
-import Header from "./AboutComponents/Header";
+import Header from "../SiteComponents/Header";
 import AboutSection from "./AboutComponents/AboutSection";
 import Values from "./AboutComponents/Values";
 
@@ -9,9 +9,9 @@ export default function About() {
     return (
     <main className="pt-[80px] text-brand-blue">
         <Navbar />
-        <Header />
+      
         <AboutSection />
-        <Values />
+        {/* <Values /> */}
         <Footer />
       </main>
     )

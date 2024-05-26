@@ -39,6 +39,7 @@ const FAQ = () => {
           </div>
           <div className={`${activeIndex === index ? 'block' : 'hidden'} text-gray-600 mt-2`}>
             {faq.answer}
+            
           </div>
         </div>
       ))}
@@ -46,5 +47,6 @@ const FAQ = () => {
     </div>
   );
 };
+//---
 
 export default FAQ;

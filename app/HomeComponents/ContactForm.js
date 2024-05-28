@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { MdArrowOutward } from 'react-icons/md';
+import { BiArrowFromLeft, BiArrowToRight } from 'react-icons/bi';
+import { FaArrowRight } from 'react-icons/fa';
+import { IoIosArrowRoundForward }  from 'react-icons/io';
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -60,9 +63,9 @@ function ContactForm() {
   };
 
   return (
-    <form className='contact-form flex flex-col ' onSubmit={handleSubmit}>
+    <form className='contact-form flex flex-col items-start' onSubmit={handleSubmit}>
         <input
-          className='text-white font-primary  mb-2 p-3 border rounded'
+          className='w-full text-white font-primary  mb-2 p-3 border rounded'
           placeholder='Your Name'
           aria-label="Name"
           type="text"
@@ -73,7 +76,7 @@ function ContactForm() {
           required
         />
         <input
-          className='text-white font-primary  p-3 mb-2 border rounded'
+          className='w-full text-white font-primary  p-3 mb-2 border rounded'
           placeholder='Your Email'
           aria-label="Email"
           type="email"
@@ -84,7 +87,7 @@ function ContactForm() {
           required
         />
         <textarea
-          className='mb-5  font-primary  p-3 border rounded'
+          className=' w-full mb-5  font-primary  p-3 border rounded'
           id="message"
           name="message"
           placeholder='Your Message'
@@ -93,20 +96,24 @@ function ContactForm() {
           required
         />
         <button
-          className='text-light font-primary flex space-x-2 items-center font-medium'
+          className=' bg-brand-orange p-3 rounded text-light font-primary flex space-x-2 items-center font-medium'
           disabled={formStatus.submitting}
         >
           {formStatus.submitting ? (
             <p className='text-[17px] font-medium'>Sending...</p>
           ) : (
             <>
-              <p className='text-[17px] font-medium underline cursor-pointer'>Submit</p>
+              <p className='text-regular font-semibold uppercase cursor-pointer'>Submit</p>
             
             </>
           )}
+          <IoIosArrowRoundForward size={30}/>
+
         </button>
         {formStatus.message && (
-          <p className="form-status-message text-[17px] italic">{formStatus.message}</p>
+          <div className="form-status-message text-[17px] italic">
+            {formStatus.message}
+            </div>
         )}
     </form>
   );

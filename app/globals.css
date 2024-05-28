@@ -85,3 +85,12 @@ ul li{
 li{
   font-family: 'Poppins';
 }
+
+.gradient-text {
+    background: linear-gradient(to bottom,#E68C2C 50%, rgba(255, 165, 0, 0) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    
+}

@@ -13,7 +13,7 @@ import StatRow from './HomeComponents/StatRow'
 
 export default function Home() {
   return (
-    <main className="pt-[80px] text-brand-blue">
+    <main className=" text-brand-blue">
       <Navbar />
         <Hero />
         <StatRow />

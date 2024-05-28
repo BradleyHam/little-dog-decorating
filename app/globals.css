@@ -58,9 +58,14 @@ h4{
 }
 
 .hero-container{
-  background: linear-gradient(180deg, rgb(15, 18, 47) 10%, rgba(15, 18, 47, 0.548)), url('../public/images/unsplash-house.jpg');
+  background: linear-gradient(180deg, rgb(15, 18, 47) 10%, rgba(15, 18, 47, 0.548)), url('../public/images/ldd-1.jpg');
   background-position: center;
   background-size: cover;
 
 
+}
+.projects-banner{
+  background: linear-gradient(180deg, rgb(15, 18, 47) 10%, rgba(15, 18, 47, 0.548)), url('../public/images/queenstown.avif');
+  background-position: center;
+  background-size: cover;
 }

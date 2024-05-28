@@ -13,16 +13,16 @@ export default function Project(){
                     <h3 className="text-brand-blue mb-4">before</h3>
                     <div className="before-images flex flex-col  lg:flex-row lg:space-x-8 lg:space-y-0 space-y-8 ">
                     <div className="image-container w-full bg-gray-200 h-[300px]">
-                         <Image />
+                         {/* <Image /> */}
                     </div>
                     <div className="image-container w-full bg-gray-200 h-[300px]">
-                         <Image />
+                         {/* <Image /> */}
                     </div>
                     <div className="image-container w-full bg-gray-200 h-[300px]">
-                         <Image />
+                         {/* <Image /> */}
                     </div>
                     <div className="image-container w-full bg-gray-200 h-[300px]">
-                         <Image />
+                         {/* <Image /> */}
                     </div>
                     </div>
                 </div>
@@ -30,10 +30,10 @@ export default function Project(){
                 <h3 className="text-brand-blue mb-4">after</h3>
                 <div className="after-images flex flex-col lg:flex-row lg:space-x-8 lg:space-y-0 space-y-8">
                 <div className="image-container w-full bg-gray-200 h-[300px]">
-                         <Image />
+                         {/* <Image /> */}
                     </div>
                     <div className="image-container w-full bg-gray-200 h-[300px]">
-                         <Image />
+                         {/* <Image /> */}
                     </div>
                 </div>
                 </div>

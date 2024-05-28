@@ -36,7 +36,7 @@ const TestimonialCarousel = () => {
   const offset = currentIndex * -100; // Each item moves left by 100% of container width
 
   return (
-    <div className="overflow-hidden w-full pt-24 lg:overflow-visible">
+    <div className="overflow-hidden w-full  lg:overflow-visible">
       <div className="flex transition-transform duration-500 ease-in-out"
            style={{ transform: isLargeScreen ? 'none' : `translateX(${offset}%)` }}>
         {testimonials.map((testimonial, index) => (

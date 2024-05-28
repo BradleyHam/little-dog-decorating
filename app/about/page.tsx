@@ -9,7 +9,7 @@ export default function About() {
     return (
     <main className="pt-[80px] text-brand-blue">
         <Navbar />
-      
+        <div className="projects-banner"></div>
         <AboutSection />
         {/* <Values /> */}
         <Footer />

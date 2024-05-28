@@ -12,7 +12,9 @@
 :root {
   --font-poppins: 'Poppins', sans-serif;
 }
-
+p{
+  font-family: 'Poppins';
+}
 body {
   color: #0F122F;
 }
@@ -58,14 +60,28 @@ h4{
 }
 
 .hero-container{
-  background: linear-gradient(180deg, rgb(15, 18, 47) 10%, rgba(15, 18, 47, 0.548)), url('../public/images/ldd-1.jpg');
+  background: linear-gradient(180deg, rgb(15, 18, 47) 40%, rgba(15, 18, 47, 0.548)), url('../public/images/ldd-1.jpg');
   background-position: center;
   background-size: cover;
 
 
 }
-.projects-banner{
-  background: linear-gradient(180deg, rgb(15, 18, 47) 10%, rgba(15, 18, 47, 0.548)), url('../public/images/queenstown.avif');
+.top-banner{
+  background: linear-gradient(to bottom, rgb(15, 18, 47) 30%, rgba(15, 18, 47, 0.515)), url('../public/images/queenstown.avif');
   background-position: center;
   background-size: cover;
+}
+
+.testionial-card-heading{
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.111));
+  background-position: center;
+  background-size: cover;
+}
+
+ul li{
+  font-family: 'Poppins';
+}
+
+li{
+  font-family: 'Poppins';
 }

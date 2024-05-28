@@ -4,12 +4,12 @@ const testimonials = [
     {
         name: 'john doe',
         occupation: 'software engineer',
-        testimonial: `We recently hired Lakeside Painting to refresh our living room and kitchen, and I couldn't be happier with the results. Their team was professional, tidy, and incredibly efficient. The quality of the work is outstanding, and they managed to perfectly match the colors we envisioned. I highly recommend them to anyone looking to enhance their home`
+        testimonial: `Little Dog Decorating did an amazing job on our office renovation. Their attention to detail and commitment to excellence really stood out. The painters were friendly, efficient, and left the place spotless every day. Our office now has a fresh, vibrant look that has impressed both our staff and clients. Thank you, Little Dog Decorating!`
     },
     {
         name: 'james dean',
         occupation: 'shop manager',
-        testimonial: `Choosing Lakeside Painting was one of the best home improvement decisions we've ever made. Not only did they provide a detailed consultation, but their attention to detail was impeccable. Our home now feels brand new, thanks to their excellent craftsmanship and dedication to quality. Their friendly and knowledgeable team made the whole process a breeze!`
+        testimonial: `I couldn't be happier with the work Little Dog Decorating did on our home! From the initial consultation to the final touches, their team was professional, punctual, and incredibly detail-oriented. The quality of their painting exceeded our expectations, and our home looks stunning. I highly recommend Little Dog Decorating for anyone looking to transform their space with expert painting services`
     }
 ]
 

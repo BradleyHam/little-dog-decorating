@@ -4,7 +4,9 @@ import Navbar from "../SiteComponents/Navbar"
 import ProjectCard from "./ProjectCard"
 import Image from 'next/image'
 import FilterBar from "./FilterBar"
+
 import {useState} from 'react'
+import TopBanner from "@/app/SiteComponents/TopBanner"
 
 const categories = [
     'Commercial',
@@ -19,8 +21,7 @@ export default function Projects() {
     return (
         <main>
             <Navbar />
-            <div className="projects-banner  h-[220px] lg:h-[400px] relative">
-        </div>
+            <TopBanner />
             <div className="projects mt-[20px] lg:my-[80px] mt-32 mb-12 mx-5 max-w-6xl lg:mx-auto">
             <h1 className="text-black lg:text-3xl">Projects</h1>
             <p className="lg:mt-[20px]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus hic quisquam deserunt repellendus soluta rerum pariatur eius id, modi libero!</p>

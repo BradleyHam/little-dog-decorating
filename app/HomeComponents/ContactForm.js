@@ -60,9 +60,9 @@ function ContactForm() {
   };
 
   return (
-    <form className='contact-form flex flex-col' onSubmit={handleSubmit}>
+    <form className='contact-form flex flex-col ' onSubmit={handleSubmit}>
         <input
-          className='text-white font-primary opacity-70 mb-2 p-4 shadow rounded'
+          className='text-white font-primary  mb-2 p-3 border rounded'
           placeholder='Your Name'
           aria-label="Name"
           type="text"
@@ -73,7 +73,7 @@ function ContactForm() {
           required
         />
         <input
-          className='text-white font-primary opacity-70 p-4 mb-2 shadow rounded'
+          className='text-white font-primary  p-3 mb-2 border rounded'
           placeholder='Your Email'
           aria-label="Email"
           type="email"
@@ -84,7 +84,7 @@ function ContactForm() {
           required
         />
         <textarea
-          className='mb-5  font-primary opacity-70 p-4 shadow rounded'
+          className='mb-5  font-primary  p-3 border rounded'
           id="message"
           name="message"
           placeholder='Your Message'

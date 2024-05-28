@@ -4,12 +4,12 @@ import Image from 'next/image'
 import Header from "../SiteComponents/Header";
 import AboutSection from "./AboutComponents/AboutSection";
 import Values from "./AboutComponents/Values";
-
+import TopBanner from "../SiteComponents/TopBanner";
 export default function About() {
     return (
-    <main className="pt-[80px] text-brand-blue">
+    <main className=" text-brand-blue">
         <Navbar />
-        <div className="projects-banner"></div>
+        <TopBanner />
         <AboutSection />
         {/* <Values /> */}
         <Footer />

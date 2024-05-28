@@ -27,7 +27,7 @@ const FAQ = () => {
 
   return (
     <div className="lg:max-w-[70%] container mx-auto p-5 pb-0 pt-28">
-      <h2 className="text-3xl font-bold mb-12 text-center tracking-tight font-poppins">Frequently asked questions</h2>
+      <h2 className="text-2xl font-bold mb-12 text-center tracking-tight font-poppins text-brand-blue">Frequently asked questions</h2>
       {faqData.map((faq, index) => (
         <div onClick={() => toggleFAQ(index)} key={index} className="mb-4 cursor-pointer">
           <hr className="border-gray-300 my-4" />

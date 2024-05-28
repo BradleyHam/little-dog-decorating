@@ -26,7 +26,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <div className={`navbar w-screen fixed top-0 right-0 left-0 z-20 ${scrolled ? 'bg-brand-blue' : 'bg-transparent'} transition-colors duration-300`}>
+        <div className={`navbar w-screen fixed top-0 right-0 left-0 z-20 bg-brand-blue  transition-colors duration-300`}>
             <div className="container px-4 mx-auto flex flex-row justify-between items-center text-white">
                 <div className="logo z-20 translate-y-4 order-last lg:order-first">
                     <Image src='/images/ldd-logo.png' alt='something' width={75} height={75}/>
@@ -48,7 +48,7 @@ export default function Navbar() {
                             </ul>
                         )}
 
-                        <ul className="flex-row space-x-8 items-center font-lato hidden lg:flex">
+                        <ul className="flex-row space-x-8 items-center hidden lg:flex">
                             <Link href="/">
                                 <li>Home</li>
                             </Link>

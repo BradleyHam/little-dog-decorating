@@ -1,10 +1,10 @@
 import Image from 'next/image'
 export default function About() {
     return(
-        <div className="px-5 container mx-auto lg:max-w-[70%] py-24">
+        <div className="px-5 container mx-auto lg:max-w-[70%] mb-[80px]  z-20 relative">
         
-           <h2 className="text-3xl font-bold text-left tracking-tight font-poppins">About</h2>
-            <div className='bg-gray-200 h-[300px] w-full mt-[20px] lg:mt-[30px]'>
+           {/* <h2 className="text-3xl font-bold text-left tracking-tight font-poppins">About</h2> */}
+            <div className='bg-gray-200 h-[300px] w-full -mt-[20px] lg:-mt-[30px] z-10 '>
              {/* <Image /> */}
             </div>
         <p className="font-lato font-normal opacity-80 text-xl lg:text-left pt-[20px] lg:pt-[30px]">

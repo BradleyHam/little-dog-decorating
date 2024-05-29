@@ -23,7 +23,7 @@ export default function Projects() {
             <Navbar />
             <TopBanner />
             <div className="projects mt-[20px] lg:my-[80px] mt-32 mb-12 mx-5 max-w-6xl lg:mx-auto">
-            <h1 className="text-black lg:text-3xl">Projects</h1>
+            {/* <h1 className="text-black lg:text-3xl">Projects</h1> */}
             <p className="lg:mt-[20px]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus hic quisquam deserunt repellendus soluta rerum pariatur eius id, modi libero!</p>
             <FilterBar categories={categories} onFilterChange={setFilteredCategory}/>
             <div className="flex flex-col space-y-[40px] mt-[40px] lg:flex-row lg:space-y-0 lg:space-x-8">

@@ -1,11 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
-import { MdArrowOutward } from 'react-icons/md';
-import { BiArrowFromLeft, BiArrowToRight } from 'react-icons/bi';
-import { FaArrowRight } from 'react-icons/fa';
-import { IoIosArrowRoundForward }  from 'react-icons/io';
-
+import { IoSend } from 'react-icons/io5';
 function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -65,7 +61,7 @@ function ContactForm() {
   return (
     <form className='contact-form flex flex-col items-start' onSubmit={handleSubmit}>
         <input
-          className='w-full text-white font-primary  mb-2 p-3 border rounded'
+          className='w-full text-white font-primary  mb-1 p-3 border-2 rounded'
           placeholder='Your Name'
           aria-label="Name"
           type="text"
@@ -76,7 +72,7 @@ function ContactForm() {
           required
         />
         <input
-          className='w-full text-white font-primary  p-3 mb-2 border rounded'
+          className='w-full text-white font-primary  p-3 mb-1 border-2 rounded'
           placeholder='Your Email'
           aria-label="Email"
           type="email"
@@ -87,7 +83,7 @@ function ContactForm() {
           required
         />
         <textarea
-          className=' w-full mb-5  font-primary  p-3 border rounded'
+          className=' w-full mb-5  font-primary  p-3  border-2 rounded min-h-[150px]'
           id="message"
           name="message"
           placeholder='Your Message'
@@ -96,7 +92,7 @@ function ContactForm() {
           required
         />
         <button
-          className=' bg-brand-orange p-3 rounded text-light font-primary flex space-x-2 items-center font-medium'
+          className=' bg-brand-orange p-3 rounded text-light font-primary flex space-x-2 items-center font-medium text-sm tracking-wider shadow-lg active:shadow-md active:translate-y-[2px] transition ease-in-out'
           disabled={formStatus.submitting}
         >
           {formStatus.submitting ? (
@@ -107,7 +103,7 @@ function ContactForm() {
             
             </>
           )}
-          <IoIosArrowRoundForward size={30}/>
+          <IoSend size={16}/>
 
         </button>
         {formStatus.message && (

@@ -11,7 +11,7 @@ export default function About() {
         <Navbar />
         <TopBanner />
         <AboutSection />
-        {/* <Values /> */}
+        <Values />
         <Footer />
       </main>
     )

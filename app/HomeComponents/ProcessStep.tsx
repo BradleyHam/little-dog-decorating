@@ -1,15 +1,11 @@
 export default function ProcessStep({number, heading, description}: {number: number, heading: string, description: string}) {
     return (
-        <div className="process-step flex flex-col space-y-2 items-start lg:items-center lg:w-1/3">
-        <div className="number text-4xl font-black translate-y-7  lg:-translate-x-0 -z-10 text-7xl gradient-text">
-            {number}
+        <div className="flex flex-col items-start lg:items-center text-center">
+        <div className="relative flex justify-center items-center w-12 h-12 mb-4">
+            <span className="gradient-text text-6xl font-bold translate-y-[28px] -translate-x-[10px] lg:-translate-x-[0]">{number}</span>
         </div>
-        <div className="heading text-3xl font-bold font-poppins text-brand-blue tracking-tighter">
-            {heading}
-        </div>
-        <p className="description font-lato font-medium opacity-80 text-xl text-left lg:text-center">
-            {description}
-        </p>
+        <h3 className="text-2xl font-bold mb-2 tracking-tighter">{heading}</h3>
+        <p className="text-gray-600 text-left lg:text-center">{description}</p>
     </div>
     )
 }

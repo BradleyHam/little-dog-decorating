@@ -4,9 +4,9 @@ import ContactForm from "./ContactForm";
 
 export default function Contact(){
     return (
-        <div className="contact py-[80px] lg:mx-[20px] mx-[5px] lg:mx-0">
-            <div className="container  mx-auto">
-            <div className=" flex flex-col lg:flex-row   lg:space-y-0 bg-white itemx-center  lg:w-[80%]   lg:mx-auto  border-2 rounded-lg border">
+        <div className="contact py-[80px] px-[5px] bg-white">
+            <div className="container lg:mx-auto ">
+            <div className="flex flex-col lg:flex-row   lg:space-y-0 bg-white  lg:w-[80%]   lg:mx-auto  border-2 rounded-lg border">
                 <div className="text-side lg:w-1/2 lg: py-[40px] lg:pl-[40px] pl-[20px]">
                     <h3 className=" mb-4 font-bold tracking-tighter text-[#0F122F]">Contact us for a  <span className="  "> free consultation</span></h3>
                     <div className="contact-method mb-2 flex items-center space-x-2">

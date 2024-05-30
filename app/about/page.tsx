@@ -5,6 +5,7 @@ import Header from "../SiteComponents/Header";
 import AboutSection from "./AboutComponents/AboutSection";
 import Values from "./AboutComponents/Values";
 import TopBanner from "../SiteComponents/TopBanner";
+import FooterBanner from "../SiteComponents/FooterBanner";
 export default function About() {
     return (
     <main className=" text-brand-blue">
@@ -12,6 +13,7 @@ export default function About() {
         <TopBanner />
         <AboutSection />
         <Values />
+        <FooterBanner />
         <Footer />
       </main>
     )

@@ -7,7 +7,7 @@ export default function Project(){
     return (
         <div>
             <Navbar />
-            <div className="px-5 mb-24 mt-[70px] container sm:mx-auto">
+            <div className="px-5 bg-white mb-24 mt-[70px] container sm:mx-auto">
                 <h1 className="text-black pt-24">Project</h1>
                 <div className="before mt-4">
                     <h3 className="text-brand-blue mb-4">before</h3>

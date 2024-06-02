@@ -4,6 +4,13 @@ import { FaChevronDown } from 'react-icons/fa';
 
 const textOpacity = 'opacity-70'
 const textSize = 'text-sm'
+
+function capitalize(str) {
+  if (typeof str !== 'string' || str.length === 0) {
+    return '';
+  }
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 const CustomDropdown = ({ categories, onFilterChange }) => {
   const [selectedCategory, setSelectedCategory] = useState('ALL CATEGORIES');
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +39,7 @@ const CustomDropdown = ({ categories, onFilterChange }) => {
 
   return (
     <div className="relative inline-block text-left mt-[20px] w-[100%] max-w-[300px]" ref={dropdownRef}>
-      <div className='border border-gray-500 mb-[20px]'>
+      <div className='border border-gray-500 '>
         <button
           type="button"
           className={`inline-flex items-center justify-between w-full  px-4 py-2 bg-white text-sm tracking-wide font-medium text-gray-700 hover:bg-gray-50 focus:outline-none ${textOpacity} ${textSize}`}
@@ -41,7 +48,7 @@ const CustomDropdown = ({ categories, onFilterChange }) => {
           aria-expanded="true"
           onClick={toggleDropdown}
         >
-          {selectedCategory}
+          {capitalize(selectedCategory)}
           <FaChevronDown />
         </button>
         
@@ -55,14 +62,13 @@ const CustomDropdown = ({ categories, onFilterChange }) => {
                 className={`block px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full text-left ${textOpacity} ${textSize}`}
                 role="menuitem"
               >
-                {category}
+                {capitalize(category)}
               </button>
             ))}
           </div>
         </div>
       )}
       </div>
-
     </div>
   );
 };

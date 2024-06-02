@@ -10,7 +10,7 @@ export default function About() {
     return (
     <main className=" text-brand-blue">
         <Navbar />
-        <TopBanner />
+        <TopBanner heading={"About Us"} />
         <AboutSection />
         <Values />
         <FooterBanner />

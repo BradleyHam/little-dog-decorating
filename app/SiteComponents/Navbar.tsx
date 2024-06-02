@@ -24,9 +24,9 @@ export default function Navbar() {
     };
 
     return (
-        <div className="navbar w-screen fixed top-0 right-0 left-0 h-[80px] z-50 bg-brand-blue">
+        <div className="navbar w-screen  top-0 right-0 left-0  fixed bg-brand-blue z-50">
             <div className="container px-[20px] mx-auto flex flex-row justify-between items-center text-white">
-                <div onClick={handleToggle} className="hamburger-container cursor-pointer lg:hidden z-30 fixed top-4 left-4 pt-4 pr-4 pb-4">
+                <div onClick={handleToggle} className="hamburger-container cursor-pointer lg:hidden z-30  top-4 left-4 pt-4 pr-4 pb-4">
                     {open ? <IoClose size={25} /> : <IoMenu size={25} />}
                 </div>
                 <div className="logo hidden lg:block translate-y-2 p-4 rounded-full">

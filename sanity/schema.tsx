@@ -28,8 +28,8 @@ const schema = {
             { title: 'Interior', value: 'interior' },
             { title: 'Exterior', value: 'exterior' },
             { title: 'Wallpapering', value: 'wallpapering' },
-            { title: 'Gib Stopping', value: 'gibStopping' },
-            { title: 'Roof Repaint', value: 'roofRepaint' },
+            { title: 'Gib Stopping', value: 'gib stopping' },
+            { title: 'Roof Repaint', value: 'roof repaint' },
 
           ]
         }
@@ -61,14 +61,8 @@ const schema = {
       "of": [{ type: "block" }]  // Added "block" type within the array
     },
     {
-      "name": "beforeImages",
-      "title": "Before Images",
-      "type": "array",
-      "of": [{ type: "image" }]
-    },
-    {
-      "name": "afterImages",
-      "title": "After Images",
+      "name": "images",
+      "title": "Images",
       "type": "array",
       "of": [{ type: "image" }]
     }

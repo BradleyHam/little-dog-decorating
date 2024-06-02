@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from 'next/image'
 import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function ProjectCard({title, smallImage, mediumImage, largeImage, categories, topHeavy, slug}: {title: string, topHeavy: boolean, smallImage: string, mediumImage: string, largeImage: string, categories: string[], slug: string}) {
-  console.log('large image', largeImage)
+  console.log('slug', slug)
   return (
         <div className="project-card w-full">
         <Link href={`/projects/${slug}`} className="w-full">
@@ -35,8 +36,8 @@ export default function ProjectCard({title, smallImage, mediumImage, largeImage,
         </div>
         </Link>
         <div className="card-description-row mt-4 flex justify-between items-center">
-          <h2 className="text-lg font-semibold tracking-tighter">{title}</h2>
-          <FaArrowRight />
+          <h2 className="text-base font-regular tracking">{title}</h2>
+          <FaArrowRightLong size={22} color='#0F122F'/>
         </div>
       
         </div>

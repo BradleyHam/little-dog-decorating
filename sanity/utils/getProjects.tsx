@@ -1,12 +1,5 @@
-import { createClient, groq } from "next-sanity";
-
-export const client = createClient({
-  apiVersion: '2024-05-31',
-  projectId: 'nzq5cghb',
-  dataset: 'production',
-  useCdn: false,
-});
-
+import { groq } from "next-sanity";
+import client from '../client-config';
 export default async function getProjects() {
   try {
     const projects = await client.fetch(groq`*[_type == "projects"]{

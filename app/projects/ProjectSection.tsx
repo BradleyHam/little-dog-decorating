@@ -2,61 +2,58 @@
 import React, { useState } from 'react'
 import FilterBar from './FilterBar';
 import ProjectCard from './ProjectCard';
+import {Project} from '@/types/Project'
 
 const categories = [
   {
     name: 'All Categories',
-    title: 'All Categories'
+    title: 'all categories'
   },
   {
     name: 'interior',
-    title: 'Interior'
+    title: 'interior'
   },
   {
     name: 'exterior',
-    title: 'Exterior'
+    title: 'exterior'
   },
   {
     name: 'wallpapering',
-    title: 'Wallpapering'
+    title: 'wallpapering'
   },
   {
     name: 'gibStopping',
-    title: 'Gib Stopping'
+    title: 'gib stopping'
   },
   {
     name: 'roofRepaint',
-    title: 'Roof Repaint'
+    title: 'roof repaint'
   }
   ];
 
   const categoryTitles = categories.map((category) => category.title);
 
-  type Project = {
-    largeImage: string;
-    smallImage: string;
-    mediumImage: string;
-    title: string;
-    categories: string[];
-    slug: string
-  };
+
 
 function Projects({projects}: {projects: Project[]}) {
 
-  const [filteredCategory, setFilteredCategory] = useState('All Categories');
+  const [filteredCategory, setFilteredCategory] = useState('all categories');
+
+  // algorithm to filter projects based on category
+  
 
   return (
     <div>
          <FilterBar categories={categoryTitles} onFilterChange={setFilteredCategory}/>
-            <div className="flex flex-col space-y-[60px] mt-[60px] lg:flex-row lg:space-y-0 lg:space-x-8">
+            <div className="flex flex-col space-y-[40px]  lg:flex-row lg:space-y-0 lg:space-x-8 mt-[40px]">
               { projects
                 .filter((project) => {
-                  if (filteredCategory === 'All Categories') {
+                  if (filteredCategory === 'all categories') {
                     return true;
                   }
                   return project.categories.includes(filteredCategory);
                 })
-                .map((project) => (
+                .map( (project, index) => (
                   <ProjectCard
                     key={project.title}
                     largeImage={project.largeImage}
@@ -64,7 +61,7 @@ function Projects({projects}: {projects: Project[]}) {
                     mediumImage={project.mediumImage}
                     title={project.title}
                     categories={project.categories}
-                    topHeavy={true}
+                    topHeavy={index % 2 === 0}
                     slug={project.slug}
                   />
                 ))}

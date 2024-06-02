@@ -4,14 +4,14 @@ import { RiFacebookFill } from 'react-icons/ri'
 export default function Footer(){
     return (  
         <div className='footer bg-brand-blue text-white px-5'>
-        <div className='footer-container container mx-auto flex justify-center items-center py-[60px]'>
+        <div className='footer-container container mx-auto flex justify-center items-center py-[40px]'>
           
             <div className='socials flex justify-center'>
                 <a className='facebook opacity-70 cursor-pointer hover:opacity-100' href='https://www.facebook.com/profile.php?id=61556279065294&mibextid=qi2Omg&rdid=znh743H9o3lnaMpV' >
-                    <AiFillInstagram size={40} />
+                    <AiFillInstagram size={30} />
                 </a>
                 <a className='instagram opacity-70 cursor-pointer hover:opacity-100' href='https://www.instagram.com/rts_chemicals/'>
-                <RiFacebookFill size={40}  />
+                <RiFacebookFill size={30}  />
               </a> 
             </div>
         </div>

@@ -1,50 +1,31 @@
+import React from "react";
 import Footer from "@/app/SiteComponents/Footer";
 import Navbar from "@/app/SiteComponents/Navbar";
-import Image from "next/image";
+import getProject from "@/sanity/utils/getProject";
+import ContentRenderer from "@/app/SiteComponents/ContentRenderer";
+import ExpandableContent from "@/app/projects/[project]/ExpandableContent";
+import dynamic from "next/dynamic";
 
+// Dynamically import the LightboxGallery component to ensure it is only used on the client side
+const LightboxGallery = dynamic(() => import("../LightboxGallery"), { ssr: false });
 
-export default function Project(){  
-    return (
-        <div>
-            <Navbar />
-            <div className="px-5 bg-white mb-24 mt-[70px] container sm:mx-auto">
-                <h1 className="text-black pt-24">Project</h1>
-                <div className="before mt-4">
-                    <h3 className="text-brand-blue mb-4">before</h3>
-                    <div className="before-images flex flex-col  lg:flex-row lg:space-x-8 lg:space-y-0 space-y-8 ">
-                    <div className="image-container w-full bg-gray-200 h-[300px]">
-                         {/* <Image /> */}
-                    </div>
-                    <div className="image-container w-full bg-gray-200 h-[300px]">
-                         {/* <Image /> */}
-                    </div>
-                    <div className="image-container w-full bg-gray-200 h-[300px]">
-                         {/* <Image /> */}
-                    </div>
-                    <div className="image-container w-full bg-gray-200 h-[300px]">
-                         {/* <Image /> */}
-                    </div>
-                    </div>
-                </div>
-                <div className="after pt-8">
-                <h3 className="text-brand-blue mb-4">after</h3>
-                <div className="after-images flex flex-col lg:flex-row lg:space-x-8 lg:space-y-0 space-y-8">
-                <div className="image-container w-full bg-gray-200 h-[300px]">
-                         {/* <Image /> */}
-                    </div>
-                    <div className="image-container w-full bg-gray-200 h-[300px]">
-                         {/* <Image /> */}
-                    </div>
-                </div>
-                </div>
-                <div className="project-description pt-8">
-                    <h3 className="pb-4">about the project</h3>
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, vel? Consequuntur est voluptatem nobis? Voluptatum totam quam iusto numquam accusantium dignissimos earum repellat eligendi. Voluptas ratione corporis assumenda maiores ea.
-                    </p>
-                </div>
-            </div>
-            <Footer />
-        </div>
-    )
+export default async function Project({ params }: { params: { project: string } }) {
+  const { project } = params;
+  const projectData = await getProject(project);
+
+  const { title, categories, content, largeImage, smallImage, mediumImage, imageUrls } = projectData;
+
+  return (
+    <div>
+      <Navbar />
+      <div className="px-5 bg-white pt-[40px] container sm:mx-auto">
+        <h1 className="text-black pt-24 tracking-tight leading-none">{title}</h1>
+        <ExpandableContent>
+          <ContentRenderer blocks={content} />
+        </ExpandableContent>
+        <LightboxGallery imageUrls={imageUrls} />
+      </div>
+      <Footer />
+    </div>
+  );
 }

@@ -6,6 +6,7 @@
 @import '@fontsource/poppins/500.css'; /* Medium */
 @import '@fontsource/poppins/700.css'; /* Bold */
 @import '@fontsource/poppins/600.css'; /* Bold */
+@import '@fontsource/poppins/800.css'; /* Bold */
 
 
 
@@ -65,8 +66,8 @@ h4{
 }
 
 .hero-container{
-  background: linear-gradient(180deg, rgb(15, 18, 47) 40%, rgba(15, 18, 47, 0.548)), url('../public/images/ldd-1.jpg');
-  background-position: center;
+  background: linear-gradient(180deg, rgba(15, 18, 47, 0.982) 40%, rgba(15, 18, 47, 0.519)), url('../public/images/ldd-1.jpg');
+  background-position: center ;
   background-size: cover;
 
 

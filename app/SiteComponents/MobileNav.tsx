@@ -4,7 +4,13 @@ import ButtonCta from './ButtonCta';
 import Link from 'next/link';
 import gsap from 'gsap';
 
-function MobileNav({ open, onClose }: { open: boolean, onClose: () => void }) {
+interface MobileNavProps {
+    open: boolean;
+    onClose: () => void;
+    handleToggle: () => void;
+}
+
+const MobileNav: React.FC<MobileNavProps> = ({ open, onClose, handleToggle }) => {
     const mobileNavRef = useRef<HTMLUListElement>(null);
     const listItemRefs = useRef<(HTMLLIElement | null)[]>([]);
     const buttonRef = useRef<HTMLDivElement>(null);
@@ -25,13 +31,13 @@ function MobileNav({ open, onClose }: { open: boolean, onClose: () => void }) {
 
     return (
         <ul ref={mobileNavRef} className='mobile-nav bg-brand-blue h-screen flex flex-col justify-center w-screen items-center space-y-4 uppercase tracking-wider text-sm lg:hidden fixed inset-0'>
-            <Link href="/">
+            <Link href="/" onClick={handleToggle}>
                 <li ref={(el) => { listItemRefs.current[0] = el }} style={{ opacity: 0, transform: 'translateY(20px)' }}>Home</li>
             </Link>
-            <Link href="/about">
+            <Link href="/about" onClick={handleToggle}>
                 <li ref={(el) => { listItemRefs.current[1] = el }} style={{ opacity: 0, transform: 'translateY(20px)' }}>About</li>
             </Link>
-            <Link href="/projects">
+            <Link href="/projects" onClick={handleToggle}>
                 <li ref={(el) => { listItemRefs.current[2] = el }} style={{ opacity: 0, transform: 'translateY(20px)' }}>Projects</li>
             </Link>
             <div ref={buttonRef} className="pt-8" style={{ opacity: 0, transform: 'translateY(20px)' }}>
@@ -39,6 +45,6 @@ function MobileNav({ open, onClose }: { open: boolean, onClose: () => void }) {
             </div>
         </ul>
     );
-}
+};
 
 export default MobileNav;

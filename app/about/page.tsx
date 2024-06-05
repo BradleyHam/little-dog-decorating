@@ -9,12 +9,12 @@ import FooterBanner from "../SiteComponents/FooterBanner";
 export default function About() {
     return (
     <main className=" text-brand-blue">
-        <Navbar />
+        {/* <Navbar />
         <TopBanner heading={"About Us"} />
         <AboutSection />
         <Values />
         <FooterBanner />
-        <Footer />
+        <Footer /> */}
       </main>
     )
 }

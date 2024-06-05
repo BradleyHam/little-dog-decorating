@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ServiceData = {
     exteriorPainting: {
         heading: 'Exterior Painting',
-        bulletPoints: ['Roof Spraying', 'Water Blasting', 'Cedar Care', 'Gutter Cleaning']
+        bulletPoints: ['Roof Spraying', 'Water Blasting', 'Staining']
     },
     interiorPainting: {
         heading: 'Interior Painting',

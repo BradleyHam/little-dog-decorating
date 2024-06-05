@@ -1,5 +1,6 @@
 import { FaCheck } from "react-icons/fa";
 import ButtonSeeMore from "../SiteComponents/ButtonSeeMore";
+import Link from "next/link";
 
 export default function ServiceText({heading, bulletPoints}: {heading: string, bulletPoints: string[]}) {
     return (
@@ -11,7 +12,9 @@ export default function ServiceText({heading, bulletPoints}: {heading: string, b
                 {bulletPoints.map((point, index) =>   <li key={index} className='flex items-center space-x-2'><FaCheck color='#E68C2C'/><p className='opacity-90'>{point}</p></li>)}
             </ul>
             </div>
-            <ButtonSeeMore />
+            <Link href="/projects">
+             <ButtonSeeMore />
+            </Link>
         </div>    
     </>    
     )

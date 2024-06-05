@@ -21,7 +21,6 @@ export default function Contact(){
                 <div className="form-side lg:w-1/2 py-[40px] bg-gray-50 lg:px-[40px] px-[20px] ">
                     <ContactForm/>
                 </div>
-             
             </div>
                 <div className='map-view h-[350px] mt-[80px]'>
                     <iframe

@@ -30,7 +30,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ open, onClose, handleToggle }) =>
     }, [open, onClose]);
 
     return (
-        <ul ref={mobileNavRef} className='mobile-nav bg-brand-blue h-screen flex flex-col justify-center w-screen items-center space-y-4 uppercase tracking-wider text-sm lg:hidden fixed inset-0'>
+        <ul ref={mobileNavRef} className='mobile-nav fixed bg-brand-blue h-screen flex flex-col justify-center w-screen items-center space-y-4 uppercase tracking-wider text-sm lg:hidden  inset-0'>
             <Link href="/" onClick={handleToggle}>
                 <li ref={(el) => { listItemRefs.current[0] = el }} style={{ opacity: 0, transform: 'translateY(20px)' }}>Home</li>
             </Link>

@@ -18,8 +18,12 @@ export default async function Project({ params }: { params: { project: string } 
   return (
     <div>
       <Navbar />
-      <div className="px-5 bg-white pt-[20px] container sm:mx-auto">
-        <h1 className="text-black pt-[97px] tracking-tight leading-none">{title}</h1>
+        <div className="top-banner  h-[220px] lg:h-[300px] relative flex  items-center">
+               <h2 className="text-2xl font-semibold text-left tracking-tight font-poppins  text-white mx-auto ">{title}</h2>
+        </div>
+      <div className="bg-white px-5  container sm:mx-auto">
+    
+        {/* <h1 className="text-black pt-[97px] tracking-tight leading-none">{title}</h1> */}
         <ExpandableContent>
           <ContentRenderer blocks={content} />
         </ExpandableContent>

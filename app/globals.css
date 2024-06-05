@@ -12,7 +12,9 @@
 
 :root {
   --font-primary: 'Poppins', sans-serif;
-  background-color: #0F122F;
+  --bg-primary: #373F51;
+  --bg-secondary: #C18C5D;
+  background-color:   var(--bg-primary);
 }
 p{
   font-family: 'Poppins';
@@ -66,14 +68,14 @@ h4{
 }
 
 .hero-container{
-  background: linear-gradient(180deg, rgba(15, 18, 47, 0.982) 40%, rgba(15, 18, 47, 0.519)), url('../public/images/ldd-1.jpg');
+  background: linear-gradient(180deg, rgb(55, 63, 81), rgba(55, 63, 81, 0.684)), url('../public/images/ldd-1.jpg');
   background-position: center ;
   background-size: cover;
 
 
 }
 .top-banner{
-  background: linear-gradient(to bottom, rgb(15, 18, 47) 30%, rgba(15, 18, 47, 0.515)), url('../public/images/queenstown.avif');
+  background: linear-gradient(180deg, rgb(55, 63, 81), rgba(55, 63, 81, 0.684)), url('../public/images/queenstown.avif');
   background-position: center;
   background-size: cover;
 }
@@ -106,6 +108,7 @@ li{
 }
 
 .footer-banner{
-  background-color: rgba(255, 255, 255, 0.089);
+  background-image: linear-gradient(to right,#E68C2C 0%, rgba(15, 20, 56, 0.739) 100%), url('/images/transformYourSpace.jpg');
+  background-position: center;
 }
 

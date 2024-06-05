@@ -40,31 +40,43 @@ function Projects({projects}: {projects: Project[]}) {
   const [filteredCategory, setFilteredCategory] = useState('all categories');
 
   // algorithm to filter projects based on category
-  
+
 
   return (
     <div>
          <FilterBar categories={categoryTitles} onFilterChange={setFilteredCategory}/>
             <div className="flex flex-col space-y-[40px]  lg:flex-row lg:space-y-0 lg:space-x-8 mt-[40px]">
-              { projects
-                .filter((project) => {
-                  if (filteredCategory === 'all categories') {
-                    return true;
-                  }
-                  return project.categories.includes(filteredCategory);
-                })
-                .map( (project, index) => (
-                  <ProjectCard
-                    key={project.title}
-                    largeImage={project.largeImage}
-                    smallImage={project.smallImage}
-                    mediumImage={project.mediumImage}
-                    title={project.title}
-                    categories={project.categories}
-                    topHeavy={index % 2 === 0}
-                    slug={project.slug}
-                  />
-                ))}
+            
+            { 
+  projects.filter((project) => {
+    if (filteredCategory === 'all categories') {
+      return true;
+    }
+    return project.categories.includes(filteredCategory);
+  }).length === 0 ? (
+    <p className="italic text-sm -translate-y-[20px] text-red-900">No projects of this type yet</p>
+  ) : (
+    projects.filter((project) => {
+      if (filteredCategory === 'all categories') {
+        return true;
+      }
+      return project.categories.includes(filteredCategory);
+    }).map((project, index) => (
+      <ProjectCard
+        key={project.title}
+        largeImage={project.largeImage}
+        smallImage={project.smallImage}
+        mediumImage={project.mediumImage}
+        title={project.title}
+        categories={project.categories}
+        topHeavy={index % 2 === 0}
+        slug={project.slug}
+      />
+    ))
+  )
+}
+
+                
             </div>
     </div>
   )

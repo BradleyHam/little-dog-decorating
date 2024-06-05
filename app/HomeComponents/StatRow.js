@@ -61,7 +61,7 @@ export default function StatRow() {
 
     return (
         <div ref={statRowRef} className="stat-row bg-white">
-            <div className="stats px-5 flex flex-col space-y-8 lg:space-y-0 items-center lg:flex-row justify-around items-left lg:items-center py-[60px]">
+            <div className="stats px-5 flex flex-col space-y-8 lg:space-y-0 items-start lg:flex-row justify-around items-left lg:items-center py-[60px]">
                 <div className="master-painters lg:w-1/3 flex justify-center">
                     <Image src='/images/master-painters.png' alt='something' width={200} height={100} />
                 </div>

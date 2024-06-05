@@ -6,10 +6,12 @@ import FilterBar from "./FilterBar"
 import TopBanner from "@/app/SiteComponents/TopBanner"
 import ProjectSection from "./ProjectSection"
 import getProjects from "@/sanity/utils/getProjects"
+import ModalClientManager from "../SiteComponents/ModalClientManager"
 export default async function Projects() {
     const projects = await getProjects();
     return (
         <main>
+            <ModalClientManager>
             <Navbar />
             <TopBanner heading={'Projects'}/>
             <div className="projects bg-white lg:my-[80px] px-[20px] py-[40px]
@@ -22,6 +24,7 @@ export default async function Projects() {
             <ProjectSection projects={projects}/>
             </div>
             <Footer />
+            </ModalClientManager>
         </main>
     )   
 }

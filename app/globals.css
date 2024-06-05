@@ -99,7 +99,7 @@ li{
 }
 
 .gradient-text {
-    background: linear-gradient(to bottom,#E68C2C 50%, rgba(255, 165, 0, 0) 90%);
+    background: linear-gradient(to bottom,var(--bg-secondary) 50%, rgba(255, 165, 0, 0) 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

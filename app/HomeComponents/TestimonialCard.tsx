@@ -6,7 +6,7 @@ export default function TestimonialCard({name, occupation, testimonial}: {name: 
             
             <div className="testionial-card-heading flex space-x-3 py-[20px] px-5">
                 <div className="flex space-x-3 items-center">
-                <BiSolidQuoteAltLeft size={40} color='#E68C2C' />
+                <BiSolidQuoteAltLeft size={40} color='#C18C5D' />
                     <div className="text-white ">
                         <p className="text-lg font-semibold capitalize tracking-tight">{name}</p>
                         <p className="text-sm uppercase tracking-widest opacity-60">{occupation}</p>  

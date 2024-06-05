@@ -92,7 +92,7 @@ function ContactForm() {
           required
         />
         <button
-          className=' bg-brand-orange p-3 rounded text-light font-primary flex space-x-2 items-center font-medium text-sm tracking-wider shadow-lg active:shadow-md active:translate-y-[2px] transition ease-in-out'
+          className=' bg-brand-secondary p-3 rounded text-brand-primary  font-primary flex space-x-2 items-center font-bold text-sm tracking-wider shadow-lg active:shadow-md active:translate-y-[2px] transition ease-in-out'
           disabled={formStatus.submitting}
         >
           {formStatus.submitting ? (

@@ -1,3 +1,5 @@
+// MobileNav.js
+
 'use client'
 import React, { useEffect, useRef } from 'react';
 import ButtonCta from './ButtonCta';
@@ -18,11 +20,11 @@ const MobileNav: React.FC<MobileNavProps> = ({ open, onClose, handleToggle }) =>
     useEffect(() => {
         const tl = gsap.timeline({ onComplete: onClose });
 
-        if (open) {
+        if (open ) {
             tl.fromTo(mobileNavRef.current, { y: -650 }, { duration: 0.5, y: 0, ease: "power1.out" })
               .to(listItemRefs.current, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: "power1.out" }, "-=0.3")
               .to(buttonRef.current, { opacity: 1, y: 0, duration: 0.5, ease: "power1.out" }, "-=0.3");
-        } else {
+        } else if (!open) {
             tl.to(buttonRef.current, { opacity: 0, y: 20, duration: 0.5, ease: "power1.out" })
               .to(listItemRefs.current, { opacity: 0, y: 20, duration: 0.5, stagger: -0.1, ease: "power1.out" }, "-=0.3")
               .fromTo(mobileNavRef.current, { y: 0 }, { duration: 0.5, y: -650, ease: "power1.out" }, '-=.3');
@@ -30,7 +32,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ open, onClose, handleToggle }) =>
     }, [open, onClose]);
 
     return (
-        <ul ref={mobileNavRef} className='mobile-nav fixed bg-brand-blue h-screen flex flex-col justify-center w-screen items-center space-y-4 uppercase tracking-wider text-sm lg:hidden  inset-0'>
+        <ul ref={mobileNavRef} className='mobile-nav fixed bg-brand-blue h-screen flex flex-col justify-center w-screen items-center space-y-4 uppercase tracking-wider text-sm lg:hidden inset-0'>
             <Link href="/" onClick={handleToggle}>
                 <li ref={(el) => { listItemRefs.current[0] = el }} style={{ opacity: 0, transform: 'translateY(20px)' }}>Home</li>
             </Link>

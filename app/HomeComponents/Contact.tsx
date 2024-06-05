@@ -8,14 +8,14 @@ export default function Contact(){
             <div className="container lg:mx-auto ">
             <div className="flex flex-col lg:flex-row   lg:space-y-0 bg-white  lg:w-[80%]   lg:mx-auto  border-2 rounded-lg border">
                 <div className="text-side lg:w-1/2 lg: py-[40px] lg:pl-[40px] pl-[20px]">
-                    <h3 className=" mb-4 font-bold tracking-tighter text-[#0F122F]">Contact us for a  <span className="  "> free consultation</span></h3>
+                    <h3 className=" mb-4 font-bold tracking-tighter text-brand-primary">Contact us for a  <span className="  "> free consultation</span></h3>
                     <div className="contact-method mb-2 flex items-center space-x-2">
-                        <FaPhoneAlt color='#0F122F'/>
-                        <p className=" opacity-70 text-lg text-[#0F122F]">+22 613 2936</p>
+                        <FaPhoneAlt color='#373F51'/>
+                        <p className=" opacity-70 text-lg text-brand-primary">+22 613 2936</p>
                     </div>
                     <div className="contact-method  flex items-center space-x-2 ">
-                         <MdEmail size={20} color='#0F122F'/> 
-                        <p className=" opacity-70 text-lg text-[#0F122F]">littedogdecorating@gmail.com</p>
+                         <MdEmail size={20} color='#373F51'/> 
+                        <p className=" opacity-70 text-lg text-brand-primary">littedogdecorating@gmail.com</p>
                     </div>
                 </div>
                 <div className="form-side lg:w-1/2 py-[40px] bg-gray-50 lg:px-[40px] px-[20px] ">

@@ -6,15 +6,18 @@ import AboutSection from "./AboutComponents/AboutSection";
 import Values from "./AboutComponents/Values";
 import TopBanner from "../SiteComponents/TopBanner";
 import FooterBanner from "../SiteComponents/FooterBanner";
+import ModalClientManager from "@/app/SiteComponents/ModalClientManager";
 export default function About() {
     return (
-    <main className=" text-brand-blue">
-        {/* <Navbar />
+    <main className=" text-brand-primary">
+      <ModalClientManager>
+        <Navbar />
         <TopBanner heading={"About Us"} />
         <AboutSection />
         <Values />
-        <FooterBanner />
-        <Footer /> */}
+        {/* <FooterBanner /> */}
+        <Footer />
+      </ModalClientManager>
       </main>
     )
 }

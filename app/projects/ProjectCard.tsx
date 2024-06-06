@@ -37,7 +37,9 @@ export default function ProjectCard({title, smallImage, mediumImage, largeImage,
         </Link>
         <div className="card-description-row mt-4 flex justify-between items-center">
           <h2 className="text-base font-regular tracking">{title}</h2>
-          <FaArrowRightLong size={22} color='#0F122F'/>
+          <div className="bg-brand-secondary p-2">
+            <FaArrowRightLong size={22} color='white'/>
+          </div>
         </div>
       
         </div>

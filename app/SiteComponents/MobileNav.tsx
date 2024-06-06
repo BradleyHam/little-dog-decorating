@@ -1,5 +1,3 @@
-// MobileNav.js
-
 'use client'
 import React, { useEffect, useRef } from 'react';
 import ButtonCta from './ButtonCta';
@@ -20,7 +18,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ open, onClose, handleToggle }) =>
     useEffect(() => {
         const tl = gsap.timeline({ onComplete: onClose });
 
-        if (open ) {
+        if (open) {
             tl.fromTo(mobileNavRef.current, { y: -650 }, { duration: 0.5, y: 0, ease: "power1.out" })
               .to(listItemRefs.current, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: "power1.out" }, "-=0.3")
               .to(buttonRef.current, { opacity: 1, y: 0, duration: 0.5, ease: "power1.out" }, "-=0.3");
@@ -49,4 +47,4 @@ const MobileNav: React.FC<MobileNavProps> = ({ open, onClose, handleToggle }) =>
     );
 };
 
-export default MobileNav;
+export default React.memo(MobileNav);

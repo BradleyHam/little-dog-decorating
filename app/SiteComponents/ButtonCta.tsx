@@ -1,7 +1,6 @@
 // ButtonCta.js
 import { LuPaintbrush } from 'react-icons/lu';
-import { useModal } from './ModalClientManager';
-
+import { useModal } from '@/app/SiteComponents/ModalClientManager';
 const ButtonCta = ({ text }: { text:string }) => {
   const { handleOpenModal } = useModal();
 

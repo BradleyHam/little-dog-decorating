@@ -1,28 +1,28 @@
 'use client'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import ButtonCta from "./ButtonCta";
 import { IoClose, IoMenu } from 'react-icons/io5';
-import MobileNav from './MobileNav';
 import Image from 'next/image';
+import MobileNav from './MobileNav';
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
-    const handleToggle = () => {
+    const handleToggle = useCallback(() => {
         if (open) {
             setIsAnimating(true);
             setOpen(false);
         } else {
             setOpen(true);
         }
-    };
+    }, [open]);
 
-    const handleAnimationEnd = () => {
+    const handleAnimationEnd = useCallback(() => {
         setIsAnimating(false);
-    };
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -39,8 +39,10 @@ export default function Navbar() {
         };
     }, []);
 
+    const renderMobileNav = open || isAnimating;
+
     return (
-        <div className={`navbar w-screen top-0 right-0 left-0 fixed z-50 transition-colors duration-300 ${isScrolled ? 'bg-brand-blue' : 'bg-transparent'} py-4`}>
+        <div className={`navbar w-screen top-0 right-0 left-0 fixed z-50 transition-colors duration-300 ${isScrolled ? 'bg-brand-blue' : 'bg-transparent'} lg:py-4`}>
             <div className="container px-[20px] mx-auto flex flex-row justify-end items-center text-white">
                 <div onClick={handleToggle} className="hamburger-container cursor-pointer lg:hidden z-30 top-4 left-4 pt-4 pr-4 pb-4">
                     {open ? <IoClose size={25} /> : <IoMenu size={25} />}
@@ -48,7 +50,8 @@ export default function Navbar() {
                 <div className="logo hidden lg:block translate-y-2 p-4 rounded-full absolute left-[40px] translate-y-[20px]">
                     <Image src={'/images/ldd-logo.png'} alt="logo" width={100} height={60} /> 
                 </div>
-                {(open || isAnimating) && (
+
+                {renderMobileNav && (
                     <MobileNav open={open} onClose={handleAnimationEnd} handleToggle={handleToggle} />
                 )}
 

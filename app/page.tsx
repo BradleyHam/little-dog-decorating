@@ -33,7 +33,7 @@ export default function Home() {
         <Services />
         <ProcessSection />
         <Testimonials />
-        {/* <Faq /> */}
+        <Faq />
         <Contact />
       <Footer />
       </ModalClientManager>

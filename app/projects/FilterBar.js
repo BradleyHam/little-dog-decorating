@@ -12,7 +12,7 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 const CustomDropdown = ({ categories, onFilterChange }) => {
-  const [selectedCategory, setSelectedCategory] = useState('ALL CATEGORIES');
+  const [selectedCategory, setSelectedCategory] = useState('All categories');
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -38,8 +38,8 @@ const CustomDropdown = ({ categories, onFilterChange }) => {
   }, []);
 
   return (
-    <div className="relative inline-block text-left mt-[20px] w-[100%] max-w-[300px]" ref={dropdownRef}>
-      <div className='border border-gray-500 '>
+    <div className="relative z-30 inline-block text-left mt-[20px] w-[100%] max-w-[300px] pb-[20px]" ref={dropdownRef}>
+      <div className='border border-gray-500 absolute min-w-[300px]'>
         <button
           type="button"
           className={`inline-flex items-center justify-between w-full  px-4 py-2 bg-white text-sm tracking-wide font-medium text-gray-700 hover:bg-gray-50 focus:outline-none ${textOpacity} ${textSize}`}

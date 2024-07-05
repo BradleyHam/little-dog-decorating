@@ -4,7 +4,7 @@ import { PortableText } from '@portabletext/react';
 const components = {
   block: {
     // Default block renderer
-    normal: ({ children }) => <p>{children}</p>,
+    normal: ({ children }) => <p className='pt-[10px]'>{children}</p>,
     h1: ({ children }) => <h1>{children}</h1>,
     h2: ({ children }) => <h2>{children}</h2>,
     h3: ({ children }) => <h3>{children}</h3>,

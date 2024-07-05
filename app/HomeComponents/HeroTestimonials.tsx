@@ -1,11 +1,12 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import HeroTestimonial from "./HeroTestimonial";
+import test from 'node:test';
 
 const testimonials = [
-  { id: 1, text: "Testimonial 1 Content." },
-  { id: 2, text: "Testimonial 2 Content." },
-  { id: 3, text: "Testimonial 3 Content." }
+  { id: 1, text: "reliable, professional and knowledgeable", testimonialWriter: 'Hannah White' },
+  { id: 2, text: "clean, tidy, efficient and very nice guys", testimonialWriter: 'Eric Beattie'  },
+  { id: 3, text: "An excellent job at a very fair price", testimonialWriter: "Michele White"}
 ];
 
 const TestimonialCarousel = () => {
@@ -41,7 +42,7 @@ const TestimonialCarousel = () => {
            style={{ transform: isLargeScreen ? 'none' : `translateX(${offset}%)` }}>
         {testimonials.map((testimonial, index) => (
           <div key={testimonial.id} className="flex-none w-full  lg:w-1/3">
-            <HeroTestimonial text={testimonial.text}/>
+            <HeroTestimonial text={testimonial.text} testimonialWriter={testimonial.testimonialWriter}/>
           </div>
         ))}
       </div>

@@ -6,9 +6,9 @@ import { FaArrowRightLong } from "react-icons/fa6";
 export default function ProjectCard({title, smallImage, mediumImage, largeImage, categories, topHeavy, slug}: {title: string, topHeavy: boolean, smallImage: string, mediumImage: string, largeImage: string, categories: string[], slug: string}) {
   console.log('slug', slug)
   return (
-        <div className="project-card w-full">
-        <Link href={`/projects/${slug}`} className="w-full">
-        <div className="project-card  gap-2 grid grid-rows-6 grid-cols-12 h-[300px]  cursor-pointer">
+    <Link href={`/projects/${slug}`} className="w-full">
+        <div className="project-card w-full group ">
+        <div className="project-card  gap-2 grid grid-rows-6 grid-cols-12 h-[300px]  cursor-pointer ">
             <div className={`large relative col-span-12
              ${topHeavy ? 'row-start-1' : 'row-start-3'} 
              ${topHeavy ? 'row-end-5' : 'row-end-7'}
@@ -34,14 +34,20 @@ export default function ProjectCard({title, smallImage, mediumImage, largeImage,
                   <Image objectFit='cover' src={smallImage} fill={true} alt={'something'}/>
              </div>
         </div>
-        </Link>
         <div className="card-description-row mt-4 flex justify-between items-center">
-          <h2 className="text-base font-regular tracking">{title}</h2>
-          <div className="bg-brand-secondary p-2">
-            <FaArrowRightLong size={22} color='white'/>
+          <div className="flex items-center space-x-4">
+          <h2 className="text-base font-regular tracking font-semibold my-2">{title}</h2>
+          {/* <div className="categories flex flex-row flex-wrap gap-2">
+            {categories.map((category) => (
+              <span className="text-xs font-regular tracking bg-gray-200 py-[7px] px-3 text-primar uppercase tracking-wider">{category}</span>
+            ))}
+          </div> */}
           </div>
+          <div className="bg-gray-500 group-hover:bg-brand-secondary transition ease-in-out delay-150 p-2 self-start">
+            <FaArrowRightLong size={22} color='white'/>
         </div>
-      
         </div>
+        </div>
+        </Link>
     )
 }

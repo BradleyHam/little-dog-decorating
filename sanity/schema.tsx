@@ -26,10 +26,7 @@ const schema = {
         options: {
           list: [
             { title: 'Interior', value: 'interior' },
-            { title: 'Exterior', value: 'exterior' },
-            { title: 'Wallpapering', value: 'wallpapering' },
-            { title: 'Gib Stopping', value: 'gib stopping' },
-            { title: 'Roof Repaint', value: 'roof repaint' },
+            { title: 'Exterior', value: 'exterior' }
 
           ]
         }
@@ -38,6 +35,7 @@ const schema = {
     {
       "name": "smallImage",
       "title": "Small Image",
+      "description": "Image from projects page, not individual project page",
       "type": "image",
       "options": { hotspot: true }
     },
@@ -45,12 +43,14 @@ const schema = {
     {
       "name": "mediumImage",
       "title": "Medium Image",
+      "description": "Image from projects page, not individual project page",
       "type": "image",
       "options": { hotspot: true }
     },
     {
       "name": "largeImage",
       "title": "Large Image",
+      "description": "Image from projects page, not individual project page",
       "type": "image",
       "options": { hotspot: true }
     },

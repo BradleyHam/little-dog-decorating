@@ -1,6 +1,3 @@
-'use client'
-import { useState } from 'react';
-import Modal from './SiteComponents/Modal';
 
 import Navbar from "./SiteComponents/Navbar";
 import Footer from "./SiteComponents/Footer";
@@ -13,30 +10,24 @@ import Faq from "./HomeComponents/Faq";
 import Image from 'next/image'
 import StatRow from './HomeComponents/StatRow'
 import ModalClientManager from './SiteComponents/ModalClientManager';
+import FooterBanner from './SiteComponents/FooterBanner';
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleOpenModal = () => {
-      setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-      setIsModalOpen(false);
-  };
   return (
     <main className="relative text-brand-blue">
-        <ModalClientManager>
-        <Navbar />
-        <Hero />
-        <StatRow />
-        <Services />
-        <ProcessSection />
-        <Testimonials />
-        <Faq />
-        <Contact />
-      <Footer />
-      </ModalClientManager>
+      
+          <Navbar />
+          <Hero />
+          <StatRow />
+          <Services />
+          <ProcessSection />
+          <Testimonials />
+          <Faq />
+          <Contact />
+          {/* <FooterBanner /> */}
+          <Footer />
+      
     </main>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
+import ModalClientManager from "./SiteComponents/ModalClientManager";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -21,7 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body>{children}</body>
+      <body>
+        <ModalClientManager>
+          {children}
+        </ModalClientManager>
+      </body>
     </html>
   );
 }

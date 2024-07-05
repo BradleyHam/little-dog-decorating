@@ -9,7 +9,7 @@ interface ValueProps {
   
 export default function Value ({value, description, icon}: ValueProps) {
     return (
-        <div className='w-full rounded shadow-lg mx-5 bg-white p-8 flex flex-col space-y-2 min-h-[230px]'> 
+        <div className='w-full rounded shadow-lg  bg-white p-8 flex flex-col space-y-2 lg:min-h-[300px]'> 
             {icon}
             <h3 className='text-brand-blue text-[20px] tracking-tighter opacity-80'>{value}</h3>
             <p className='opacity-80 font-poppins'>{description}</p>

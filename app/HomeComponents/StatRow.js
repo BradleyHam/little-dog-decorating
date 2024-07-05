@@ -66,12 +66,13 @@ export default function StatRow() {
                     <Image src='/images/master-painters.png' alt='something' width={200} height={100} />
                 </div>
                 <div className="stat lg:w-1/3 text-center flex items-center space-x-4 justify-center ">
-                    <p className="text-3xl bold text-brand-blue tracking-wide"><span className=''>+</span> {housesTransformed}</p>
+                    <p className="text-3xl bold text-brand-blue tracking-wide"> {housesTransformed} <span className=''>+</span></p>
                     <p className='capitalize text-xl text-brand-blue opacity-60'> houses transformed </p>
                 </div>
                 <div className="stat lg:w-1/3 text-center flex items-center space-x-4 justify-center ">
-                    <p className="text-3xl bold text-brand-blue"><span className=''>+</span> {yearsOperating}</p>
+                    <p className="text-3xl bold text-brand-blue"> {yearsOperating}                     <span className=''>+</span></p>
                     <p className='capitalize text-xl text-brand-blue opacity-60'> Years in Business </p>
+
                 </div>
             </div>
         </div>

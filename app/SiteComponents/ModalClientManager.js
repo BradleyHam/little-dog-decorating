@@ -6,6 +6,7 @@ const ModalContext = createContext();
 
 export const useModal = () => useContext(ModalContext);
 
+
 const ModalClientManager = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 

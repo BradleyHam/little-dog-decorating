@@ -12,10 +12,31 @@
 
 :root {
   --font-primary: 'Poppins', sans-serif;
-  --bg-primary: #373F51;
+  /* --bg-primary: rgb(55, 63, 81); */
+  --bg-primary: #1e2345;
   --bg-secondary: #C18C5D;
+  --banner-gradient: linear-gradient(
+    180deg, 
+    var(--bg-primary),
+    rgba(var(--bg-primary-rgb), 0.8)
+  );
+  --bg-primary-rgb: 30, 35, 69;
   background-color:   var(--bg-primary);
 }
+/* Apply font smoothing to the entire body */
+body {
+  -webkit-font-smoothing: antialiased; /* For WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
+  font-smooth: always; /* For older browsers */
+}
+
+/* Or apply it to specific elements */
+h1, h2, h3, h4, h5, h6, p {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+}
+
 p{
   font-family: 'Poppins';
 }
@@ -68,14 +89,14 @@ h4{
 }
 
 .hero-container{
-  background: linear-gradient(180deg, rgb(55, 63, 81), rgba(55, 63, 81, 0.684)), url('../public/images/ldd-1.jpg');
+  background: var(--banner-gradient), url('../public/images/ldd-1.jpg');
   background-position: center ;
   background-size: cover;
 
 
 }
 .top-banner{
-  background: linear-gradient(180deg, rgb(55, 63, 81), rgba(55, 63, 81, 0.684)), url('../public/images/queenstown.avif');
+  background:  var(--banner-gradient), url('../public/images/queenstown.avif');
   background-position: center;
   background-size: cover;
 }
@@ -108,7 +129,18 @@ li{
 }
 
 .footer-banner{
-  background-image: linear-gradient(to right,#E68C2C 0%, rgba(15, 20, 56, 0.739) 100%), url('/images/transformYourSpace.jpg');
+  /* background-image: linear-gradient(to bottom, #c18c5d 80%, #c18c5d 100%), url('/images/transformYourSpace.jpg');  */
+
   background-position: center;
 }
 
+.subtlePattern {
+  background-image: url('/images/dot-grid.png');
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-mask-image: radial-gradient(circle, black 0%, transparent 90%);
+  mask-image: radial-gradient(circle, black 0%, transparent 90%);
+}

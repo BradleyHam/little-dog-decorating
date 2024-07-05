@@ -10,11 +10,24 @@ gsap.registerPlugin(ScrollTrigger);
 const ServiceData = {
     exteriorPainting: {
         heading: 'Exterior Painting',
-        bulletPoints: ['Roof Spraying', 'Water Blasting', 'Staining']
+        bulletPoints: [
+            'Weather-resistant coatings',
+            'Deck and fence staining',
+            'Roof painting and restoration',
+            'Cedar siding protection',
+            'Pressure washing'
+
+        ]
     },
     interiorPainting: {
         heading: 'Interior Painting',
-        bulletPoints: ['Gib Stopping', 'Wallpapering', 'Spray Painting']
+        bulletPoints: [
+            'Feature wall creation',
+            'Ceiling treatments',
+            'Wallpaper installation/removal',
+            'Spray painting',
+            'French Wash',
+        ]
     }
 }
 

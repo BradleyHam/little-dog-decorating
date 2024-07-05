@@ -7,22 +7,28 @@ import TopBanner from "@/app/SiteComponents/TopBanner"
 import ProjectSection from "./ProjectSection"
 import getProjects from "@/sanity/utils/getProjects"
 import ModalClientManager from "../SiteComponents/ModalClientManager"
+import FooterBanner from "../SiteComponents/FooterBanner"
 export default async function Projects() {
     const projects = await getProjects();
     return (
-        <main>
+        <main className="bg-white">
             <ModalClientManager>
             <Navbar />
             <TopBanner heading={'Projects'}/>
-            <div className="projects bg-white lg:my-[80px] px-[20px] py-[40px]
-            ]   max-w-6xl lg:mx-auto">
-        {/* <h1 className="text-black lg:text-3xl">Projects</h1> */}
-            <p className="lg:mt-[20px] text-sm font-light leading-relaxed">
-                Little Dog Decorating is dedicated to bringing color and life to the spaces where people live, work, and flourish. We take pride in transforming your visions into vibrant realities.
-            <br /><br />
-             Explore some of our outstanding projects and see how we aim to elevate the painting industry through quality craftsmanship.</p>
+            <div className="projects-container bg-gray-50">
+        <div className="projects lg:py-[60px] px-[20px] py-[80px] 
+            ]   lg:container lg:mx-auto">
+            <p className="lg:mt-[20px] text-sm lg:text-base font-light leading-relaxed lg:max-w-[80%]">
+                At Little Dog Decorating, we specialize in breathing new life into homes. Our passion is transforming your living spaces with fresh coats of paint and thoughtful touches that make your house feel like home again. From cozy bedrooms to inviting living rooms, we take pride in rejuvenating each corner of your residence.
+                <br />
+                <br />  
+
+                Take a look at some of our recent home makeovers. Each project showcases our commitment to quality and attention to detail in residential repainting. We believe a well-painted home isn't just about colors on walls - it's about creating spaces where families can relax, entertain, and make lasting memories.
+            </p>
             <ProjectSection projects={projects}/>
             </div>
+            </div>
+            <FooterBanner /> 
             <Footer />
             </ModalClientManager>
         </main>

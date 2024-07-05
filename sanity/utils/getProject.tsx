@@ -11,6 +11,8 @@ export default async function getProject(slug:string): Promise<Project>{
           categories,
           content,
           "imageUrls": images[].asset->url,
-        }`, {slug});
+        }`, {slug}, {next: {
+          revalidate: 1 
+        }});
         return project;
       } 

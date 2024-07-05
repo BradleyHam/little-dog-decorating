@@ -9,7 +9,9 @@ export default async function getProjects() {
       "slug": slug.current,
       title,
       categories,
-    }`);
+    }`, {}, {next: {
+      revalidate: 1 
+    }});
     return projects;
   } catch (error) {
     return [];

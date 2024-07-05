@@ -11,7 +11,7 @@ export default function Hero() {
    
     return (
         <div className="hero-container h-screen flex items-center justify-center ">
-            <div className="text-white px-5 flex flex-col items-start lg:items-center pt-4  ">
+            <div className="text-white px-5 flex flex-col items-start lg:items-center pt-[100px] lg:pt-[50px] ">
                 <HeroTestimonials />
                 <div className="heading-row flex flex-col mx-auto mt-4 lg:pt-[60px] text-center mb-[40px]">
                     <h1 ref={headingRef} className="text-4xl text-left lg:text-center text-brand-blue font-bold capitalize tracking-tight leading-normal font-poppins text-white">

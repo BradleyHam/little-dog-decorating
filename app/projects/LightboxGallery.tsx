@@ -25,10 +25,10 @@ const LightboxGallery: React.FC<LightboxGalleryProps> = ({ imageUrls }) => {
     <div>
       <div className="images-container flex flex-col space-y-[20px] py-[80px] pt-[40px] lg:grid grid-cols-3 lg:space-y-0 gap-6">
         {imageUrls.map((image, index) => (
-          <div className="p-2 bg-gray-200">
+          <div  key={index} className="p-2 bg-gray-200">
           <div
             className=" image-container w-full bg-gray-200 h-[300px] relative cursor-pointer"
-            key={index}
+           
             onClick={() => {
               setCurrentIndex(index);
               setIsOpen(true);

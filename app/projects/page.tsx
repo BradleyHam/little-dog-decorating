@@ -23,7 +23,7 @@ export default async function Projects() {
                 <br />
                 <br />  
 
-                Take a look at some of our recent home makeovers. Each project showcases our commitment to quality and attention to detail in residential repainting. We believe a well-painted home isn't just about colors on walls - it's about creating spaces where families can relax, entertain, and make lasting memories.
+                Take a look at some of our recent home makeovers. Each project showcases our commitment to quality and attention to detail in residential repainting. We believe a well-painted home isn&apos;t just about colors on walls - it&apos;s about creating spaces where families can relax, entertain, and make lasting memories.
             </p>
             <ProjectSection projects={projects}/>
             </div>

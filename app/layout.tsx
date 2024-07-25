@@ -13,6 +13,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Little Dog Decorating",
   description: "Professional painters in Queenstown",
+  icons: {
+    icon: '/images/favicon.png',
+  },
 };
 
 export default function RootLayout({

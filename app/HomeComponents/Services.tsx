@@ -60,7 +60,7 @@ export default function Services() {
                 <div className='px-5 service flex flex-col lg:flex-row'>
                     <div className='lg:w-2/3 overflow-hidden'>
                         <div ref={exteriorImageRef} className='relative h-[300px]'>
-                            <Image src='/images/ldd-exterior.jpg' layout='fill' objectFit='cover' alt='Exterior Painting' />
+                            <Image src='/images/ldd-exterior.jpg' layout='fill' objectFit='cover' alt='Exterior Painting in Queenstown' />
                         </div>
                     </div>
                     <ServiceText heading={ServiceData.exteriorPainting.heading} bulletPoints={ServiceData.exteriorPainting.bulletPoints} />
@@ -68,7 +68,7 @@ export default function Services() {
                 <div className='px-5 service flex flex-col lg:flex-row'>
                     <div className='lg:w-2/3 overflow-hidden lg:order-1'>
                         <div ref={interiorImageRef} className='relative h-[300px]'>
-                            <Image src='/images/ldd-interior.jpg' layout='fill' objectFit='cover' alt='Interior Painting' />
+                            <Image src='/images/ldd-interior.jpg' layout='fill' objectFit='cover' alt='Interior Painting in Queenstown' />
                         </div>
                     </div>
                     <ServiceText heading={ServiceData.interiorPainting.heading} bulletPoints={ServiceData.interiorPainting.bulletPoints} />

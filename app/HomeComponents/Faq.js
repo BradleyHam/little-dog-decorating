@@ -21,8 +21,8 @@ const faqData = [
     answer: "We primarily use high-quality paints from reputable brands such as Resene and Dulux. These brands offer excellent coverage and durability. However, we're flexible and can work with other brands if you have a preference. If you'd like to supply your own paint, that's absolutely fine - just let us know in advance."
   },
   {
-    question: "Do you offer color consultation services?",
-    answer: "Yes, we do offer color consultation services. Our experienced team can help you choose colors that complement your space and reflect your personal style. We can provide color swatches and even do small test patches on your walls to help you visualize the final result. This service is often included as part of our overall painting package."
+    question: "Do you offer colour consultation services?",
+    answer: "Yes, we do offer colour consultation services. Our experienced team can help you choose colours that complement your space and reflect your personal style. We can provide colour swatches and even do small test patches on your walls to help you visualize the final result. This service is often included as part of our overall painting package."
   },
   {
     question: "What kind of prep work do you do before painting?",

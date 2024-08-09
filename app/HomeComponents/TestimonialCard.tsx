@@ -14,7 +14,7 @@ export default function TestimonialCard({name, occupation, testimonial}: {name: 
                 </div>
             </div>
 
-            <p className="text-brand-blue opacity-60 text-lg font-light leading-normal text-white pt-[20px] pb-[40px] px-5">
+            <p className="text-brand-blue opacity-60 text-base font-light leading-normal text-white pt-[20px] pb-[40px] px-5">
                 {testimonial}
             </p>
 
